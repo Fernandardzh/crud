@@ -1,0 +1,16 @@
+<h1>cursos</h1>
+<p>
+	<a href="{%url 'new'%}"> agregar un curso </a>
+</p>
+<ul>
+	{%for curso in object_list%}
+	<li>
+		<p>{{curso.nombre}}</p>
+		<p>
+			<a href="{%url 'detail' curso.id%}">Ver</a>
+			<a href="{%url 'edit' curso.id%}">Editar</a>
+			<a href="{%url 'delete' curso.id%}">Borrar</a>
+		</p>
+	</li>
+	{%endfor%}
+</ul>		
